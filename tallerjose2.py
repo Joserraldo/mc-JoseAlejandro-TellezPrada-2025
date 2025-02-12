@@ -4,7 +4,7 @@ while True:
         cant1 = int(input("Digite la cardinalidad del conjunto universal U: "))
         cant2 = int(input("Digite la cardinalidad del subconjunto A: "))
     
-        if cant1 > cant2 and cant1>0 and cant2>0 : 
+        if cant1 > cant2 and cant1>=0 and cant2>=0 : 
             conjunto1 = set()
             conjunto2 = set()
 
