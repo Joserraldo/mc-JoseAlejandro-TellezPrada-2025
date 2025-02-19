@@ -1,4 +1,5 @@
 import math
+input("-----[TALLER JOSE]-----\npresiona [ENTER] para continuar...")
 '''La fábrica de automóviles Summer fabrica su popular modelo
 Sunshine en 3 colores, 5 líneas, 3 tipos de transmisión y 2 cilindrajes
 diferentes.
@@ -31,7 +32,7 @@ print("La respuesta es: 10*9*8*7 =", 10*9* 8*7)
 00? Ejemplos: 0010110000101100, 0001010000010100,
 0011000000110000'''
 print("CADENAS DE 16 BITS")
-print("La respuesta es: 2^14 =", 2**14)
+print("La respuesta es: 2^12 =", 2**12)
 
 '''Un coleccionista de libros antiguos desea ubicar sus 9 libros más
 preciados en una vitrina antirrobos, uno al lado del otro. 4 de los
