@@ -107,6 +107,6 @@ def buscar_mejor_regresion_polinomial(x, y, r2_objetivo=0.95):
 
 
 '''# EJEMPLO DE USO (muestra varias funciones porque las primeras no cumplen con R² >= 0.95):
-x = [0, 1, 2, 3, 4, 5]
-y = [1, 2.2, 3.8, 8.5, 16, 25]
+x = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5,9]
+y = [1580, 670, 200, 40, 10, 5, 12, 50, 190, 680, 1610,2]
 buscar_mejor_regresion_polinomial(x, y)'''
