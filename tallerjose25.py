@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from fractions import Fraction
 
-# Gauss-Jordan sin NumPy
+# Gauss-Jordan
 def gaussJordan(a, b):
     a = copy.deepcopy(a)
     b = b.copy()
@@ -29,7 +29,7 @@ def gaussJordan(a, b):
 
     return b
 
-# Trazadores cúbicos naturales
+# Trazadores cúbicos
 def trazadoresCubicos(x, y):
     n = len(x)
     h = [x[i+1] - x[i] for i in range(n-1)]
@@ -67,7 +67,7 @@ def evaluar_trazador(coeficientes, x_valor):
             return a * dx**3 + b * dx**2 + c * dx + d
     return None
 
-# Polinomio de Lagrange
+# Lagrange
 def multiplicar_polinomio(p1, p2):
     grado = len(p1) + len(p2) - 2
     resultado = [Fraction(0)] * (grado + 1)
@@ -91,15 +91,13 @@ def evaluar_polinomio(coeficientes, x_valor):
         resultado = resultado * x_valor + coef
     return resultado
 
-# ========================== #
 # Función principal combinada
-# ========================== #
 def main():
     x = [0, 1, 2, 3, 4, 5]
     y = [0, 5, 2.5, 4, -1.6, 2]
     punto_a_estimar = 3.55
 
-    # ========= LAGRANGE =========
+    # LAGRANGE
     x_frac = [Fraction(i) for i in x]
     y_frac = [Fraction(i) for i in y]
     n = len(x)
@@ -118,11 +116,11 @@ def main():
     coefs_float = [float(c) for c in reversed(polinomio_final)]
     valor_lagrange = evaluar_polinomio(coefs_float, punto_a_estimar)
 
-    # ========= TRAZADORES =========
+    # TRAZADORES 
     coeficientes_cubicos = trazadoresCubicos(x, y)
     valor_trazador = evaluar_trazador(coeficientes_cubicos, punto_a_estimar)
 
-    # ========= GRÁFICA =========
+    # GRÁFICA 
     xs = np.linspace(min(x) - 0.5, max(x) + 0.5, 500)
     ys_lagrange = np.polyval(coefs_float, xs)
     ys_trazador = [evaluar_trazador(coeficientes_cubicos, xi) for xi in xs]
